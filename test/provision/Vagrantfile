@@ -1,0 +1,45 @@
+Vagrant.configure("2") do |config|
+
+    $basebox_name="basebox-ubuntu-18.04-vagrant-test"
+    $basebox_hostname="ubuntu-1804-vagrant-test"
+    $src_image_name="elegoev/ubuntu-18.04-mate"
+    $src_image_version="2.0.1612955396"
+
+    ENV['VAGRANT_EXPERIMENTAL'] = "disks"
+
+    config.vm.define "#{$basebox_name}" do |machine|
+      machine.vm.box = "#{$src_image_name}"
+      machine.vm.box_version = "#{$src_image_version}"
+    
+      # define guest hostname
+      machine.vm.hostname = "#{$basebox_hostname}"
+
+      machine.vm.provider "virtualbox" do |vb|
+        vb.name = $basebox_name
+        vb.cpus = 2
+        vb.customize ["modifyvm", :id, "--memory", "4096" ]
+        vb.customize ["modifyvm", :id, "--natdnshostresolver1", "on"]
+        vb.customize ["modifyvm", :id, "--natdnsproxy1", "on"]
+        vb.customize ["modifyvm", :id, "--groups", "/basebox-test" ]
+        vb.customize ["modifyvm", :id, "--nested-hw-virt", "on" ]
+        vb.customize ["modifyvm", :id, "--vram", 256 ]
+      end
+
+      machine.vm.disk :disk, size: "40GB", primary: true
+  
+      # forwarding ports
+      machine.vm.network "forwarded_port", id: "rdp",  auto_correct: true, protocol: "tcp", guest: 3389, host: 33333, host_ip: "127.0.0.1"
+
+      # shares
+      machine.vm.synced_folder "../../packer/files-prov", "/home/vagrant/files-prov"
+    
+      # shell provisioning
+      machine.vm.provision :shell do |cfg|
+        cfg.name = "base-provisioning.sh"
+        cfg.path = "../../packer/provisioners/base-provisioning.sh"
+      end        
+
+    end   
+
+end
+  
