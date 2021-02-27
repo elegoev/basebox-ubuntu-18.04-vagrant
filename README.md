@@ -68,6 +68,16 @@ Used base image [elegoev/ubuntu-18.04](https://app.vagrantup.com/elegoev/boxes/u
 
     end
 
+### Using mate
+
+#### xRDP Issue
+
+    xRDP is not working correctly, after 'vagrant up' try the following
+
+    1. 'vagrant rdp' & login with ubuntu / ubuntu (black screen)
+    2. Disconnect RDP Client
+    3. 'vagarnt rdp' & login with vagrant / vagrant
+
 ### Referenzen
 
 - [How To Enable Nested Virtualization In VirtualBox](https://ostechnix.com/how-to-enable-nested-virtualization-in-virtualbox/)
