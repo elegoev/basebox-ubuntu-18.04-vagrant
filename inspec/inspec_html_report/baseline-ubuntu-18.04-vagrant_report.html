@@ -233,6 +233,120 @@ function  pageLoaded() {
       
 
 
+<div class="control control-status-passed" id="control-git-1.0">
+
+  
+
+  <h3 class="control-title">Control <code>git-1.0</code></h3>
+  <table class="control-metadata info" id="control-metadata-git-1.0">
+    <tr class="status status-passed"><th>Status:</th><td><div>Passed</div></td></tr>
+    <tr class="title"><th>Title:</th><td>check if git command exists</td></tr> 
+    <tr class="desc"><th>Description:</th><td>check git command</td></tr> 
+    <tr class="impact impact-high"><th>Impact:</th><td>1.0</td></tr> 
+    
+    
+    <tr class="code">
+      <th>Source Code:</th>
+      <td>
+        <input type="button" class="show-source-code" id="show-code-git-1.0" value="Show Source"/>
+        <input type="button" class="hide-source-code hidden" id="hide-code-git-1.0" value="Hide Source"/>
+        <pre class="source-code hidden" id="source-code-git-1.0">
+          <code>
+control "git-1.0" do                           # A unique ID for this control
+  impact 1.0                                   # The criticality, if this control fails.
+  title "check if git command exists"          # A human-readable title
+  desc "check git command"
+  describe command('git version') do
+    its('exit_status') { should eq 0 }
+  end
+end
+
+          </code>
+        </pre>
+      </td>
+    </tr>
+  <!-- TODO waiver data -->
+
+  </table>
+
+  
+    
+<div class="result" id="result-Command___git_version_">
+  <h4 class="resource-title">Resource <code>Command: `git version`</code></h4>
+  <table class="result-metadata info">
+    <tr class="expectation_message"><th>Test:</th><td><code>exit_status is expected to eq 0</code></td></tr>
+    <tr class="status status-passed"><th>Status:</th><td><div>Passed</div></td></tr>
+    
+    
+    <tr class="duration"><th>Duration:</th><td>0.0375225 seconds</td></tr>
+  </table>
+</div>
+
+  
+
+</div>
+
+    
+      
+
+
+<div class="control control-status-passed" id="control-jfrog-1.0">
+
+  
+
+  <h3 class="control-title">Control <code>jfrog-1.0</code></h3>
+  <table class="control-metadata info" id="control-metadata-jfrog-1.0">
+    <tr class="status status-passed"><th>Status:</th><td><div>Passed</div></td></tr>
+    <tr class="title"><th>Title:</th><td>check if jfrog command exists</td></tr> 
+    <tr class="desc"><th>Description:</th><td>check jfrog command</td></tr> 
+    <tr class="impact impact-high"><th>Impact:</th><td>1.0</td></tr> 
+    
+    
+    <tr class="code">
+      <th>Source Code:</th>
+      <td>
+        <input type="button" class="show-source-code" id="show-code-jfrog-1.0" value="Show Source"/>
+        <input type="button" class="hide-source-code hidden" id="hide-code-jfrog-1.0" value="Hide Source"/>
+        <pre class="source-code hidden" id="source-code-jfrog-1.0">
+          <code>
+control "jfrog-1.0" do                         # A unique ID for this control
+  impact 1.0                                   # The criticality, if this control fails.
+  title "check if jfrog command exists"        # A human-readable title
+  desc "check jfrog command"
+  describe command('jfrog --version') do
+    its('exit_status') { should eq 0 }
+  end
+end
+
+          </code>
+        </pre>
+      </td>
+    </tr>
+  <!-- TODO waiver data -->
+
+  </table>
+
+  
+    
+<div class="result" id="result-Command___jfrog___version_">
+  <h4 class="resource-title">Resource <code>Command: `jfrog --version`</code></h4>
+  <table class="result-metadata info">
+    <tr class="expectation_message"><th>Test:</th><td><code>exit_status is expected to eq 0</code></td></tr>
+    <tr class="status status-passed"><th>Status:</th><td><div>Passed</div></td></tr>
+    
+    
+    <tr class="duration"><th>Duration:</th><td>0.0347801 seconds</td></tr>
+  </table>
+</div>
+
+  
+
+</div>
+
+    
+      
+
+
 <div class="control control-status-passed" id="control-tmp-1.0">
 
   
@@ -278,7 +392,7 @@ end
     <tr class="status status-passed"><th>Status:</th><td><div>Passed</div></td></tr>
     
     
-    <tr class="duration"><th>Duration:</th><td>0.1307376 seconds</td></tr>
+    <tr class="duration"><th>Duration:</th><td>0.1306157 seconds</td></tr>
   </table>
 </div>
 
@@ -335,7 +449,348 @@ end
     <tr class="status status-passed"><th>Status:</th><td><div>Passed</div></td></tr>
     
     
-    <tr class="duration"><th>Duration:</th><td>0.0477515 seconds</td></tr>
+    <tr class="duration"><th>Duration:</th><td>0.0388326 seconds</td></tr>
+  </table>
+</div>
+
+  
+
+</div>
+
+    
+      
+
+
+<div class="control control-status-passed" id="control-vagrant-1.0">
+
+  
+
+  <h3 class="control-title">Control <code>vagrant-1.0</code></h3>
+  <table class="control-metadata info" id="control-metadata-vagrant-1.0">
+    <tr class="status status-passed"><th>Status:</th><td><div>Passed</div></td></tr>
+    <tr class="title"><th>Title:</th><td>check if vagrant command exists</td></tr> 
+    <tr class="desc"><th>Description:</th><td>check vagrant command</td></tr> 
+    <tr class="impact impact-high"><th>Impact:</th><td>1.0</td></tr> 
+    
+    
+    <tr class="code">
+      <th>Source Code:</th>
+      <td>
+        <input type="button" class="show-source-code" id="show-code-vagrant-1.0" value="Show Source"/>
+        <input type="button" class="hide-source-code hidden" id="hide-code-vagrant-1.0" value="Hide Source"/>
+        <pre class="source-code hidden" id="source-code-vagrant-1.0">
+          <code>
+control "vagrant-1.0" do                           # A unique ID for this control
+  impact 1.0                                       # The criticality, if this control fails.
+  title "check if vagrant command exists"          # A human-readable title
+  desc "check vagrant command"
+  describe command('vagrant version') do
+    its('exit_status') { should eq 0 }
+  end
+end
+
+          </code>
+        </pre>
+      </td>
+    </tr>
+  <!-- TODO waiver data -->
+
+  </table>
+
+  
+    
+<div class="result" id="result-Command___vagrant_version_">
+  <h4 class="resource-title">Resource <code>Command: `vagrant version`</code></h4>
+  <table class="result-metadata info">
+    <tr class="expectation_message"><th>Test:</th><td><code>exit_status is expected to eq 0</code></td></tr>
+    <tr class="status status-passed"><th>Status:</th><td><div>Passed</div></td></tr>
+    
+    
+    <tr class="duration"><th>Duration:</th><td>4.444671 seconds</td></tr>
+  </table>
+</div>
+
+  
+
+</div>
+
+    
+      
+
+
+<div class="control control-status-passed" id="control-virtualbox-1.0">
+
+  
+
+  <h3 class="control-title">Control <code>virtualbox-1.0</code></h3>
+  <table class="control-metadata info" id="control-metadata-virtualbox-1.0">
+    <tr class="status status-passed"><th>Status:</th><td><div>Passed</div></td></tr>
+    <tr class="title"><th>Title:</th><td>check if virtualbox command exists</td></tr> 
+    <tr class="desc"><th>Description:</th><td>check virtualbox command</td></tr> 
+    <tr class="impact impact-high"><th>Impact:</th><td>1.0</td></tr> 
+    
+    
+    <tr class="code">
+      <th>Source Code:</th>
+      <td>
+        <input type="button" class="show-source-code" id="show-code-virtualbox-1.0" value="Show Source"/>
+        <input type="button" class="hide-source-code hidden" id="hide-code-virtualbox-1.0" value="Hide Source"/>
+        <pre class="source-code hidden" id="source-code-virtualbox-1.0">
+          <code>
+control "virtualbox-1.0" do                    # A unique ID for this control
+  impact 1.0                                   # The criticality, if this control fails.
+  title "check if virtualbox command exists"   # A human-readable title
+  desc "check virtualbox command"
+  describe command('vboxmanage --version') do
+    its('exit_status') { should eq 0 }
+  end
+end
+
+          </code>
+        </pre>
+      </td>
+    </tr>
+  <!-- TODO waiver data -->
+
+  </table>
+
+  
+    
+<div class="result" id="result-Command___vboxmanage___version_">
+  <h4 class="resource-title">Resource <code>Command: `vboxmanage --version`</code></h4>
+  <table class="result-metadata info">
+    <tr class="expectation_message"><th>Test:</th><td><code>exit_status is expected to eq 0</code></td></tr>
+    <tr class="status status-passed"><th>Status:</th><td><div>Passed</div></td></tr>
+    
+    
+    <tr class="duration"><th>Duration:</th><td>0.0564762 seconds</td></tr>
+  </table>
+</div>
+
+  
+
+</div>
+
+    
+      
+
+
+<div class="control control-status-passed" id="control-virtualbox-2.0">
+
+  
+
+  <h3 class="control-title">Control <code>virtualbox-2.0</code></h3>
+  <table class="control-metadata info" id="control-metadata-virtualbox-2.0">
+    <tr class="status status-passed"><th>Status:</th><td><div>Passed</div></td></tr>
+    <tr class="title"><th>Title:</th><td>check if virtualbox is running</td></tr> 
+    <tr class="desc"><th>Description:</th><td>check virtualbox service</td></tr> 
+    <tr class="impact impact-high"><th>Impact:</th><td>1.0</td></tr> 
+    
+    
+    <tr class="code">
+      <th>Source Code:</th>
+      <td>
+        <input type="button" class="show-source-code" id="show-code-virtualbox-2.0" value="Show Source"/>
+        <input type="button" class="hide-source-code hidden" id="hide-code-virtualbox-2.0" value="Hide Source"/>
+        <pre class="source-code hidden" id="source-code-virtualbox-2.0">
+          <code>
+control "virtualbox-2.0" do                     # A unique ID for this control
+  impact 1.0                                    # The criticality, if this control fails.
+  title "check if virtualbox is running"        # A human-readable title
+  desc "check virtualbox service"
+  describe service('vboxdrv') do
+    it { should be_installed }
+    it { should be_enabled }
+    it { should be_running }
+  end
+end
+
+          </code>
+        </pre>
+      </td>
+    </tr>
+  <!-- TODO waiver data -->
+
+  </table>
+
+  
+    
+<div class="result" id="result-Service_vboxdrv">
+  <h4 class="resource-title">Resource <code>Service vboxdrv</code></h4>
+  <table class="result-metadata info">
+    <tr class="expectation_message"><th>Test:</th><td><code>is expected to be installed</code></td></tr>
+    <tr class="status status-passed"><th>Status:</th><td><div>Passed</div></td></tr>
+    
+    
+    <tr class="duration"><th>Duration:</th><td>0.1249209 seconds</td></tr>
+  </table>
+</div>
+
+  
+    
+<div class="result" id="result-Service_vboxdrv">
+  <h4 class="resource-title">Resource <code>Service vboxdrv</code></h4>
+  <table class="result-metadata info">
+    <tr class="expectation_message"><th>Test:</th><td><code>is expected to be enabled</code></td></tr>
+    <tr class="status status-passed"><th>Status:</th><td><div>Passed</div></td></tr>
+    
+    
+    <tr class="duration"><th>Duration:</th><td>0.0002604 seconds</td></tr>
+  </table>
+</div>
+
+  
+    
+<div class="result" id="result-Service_vboxdrv">
+  <h4 class="resource-title">Resource <code>Service vboxdrv</code></h4>
+  <table class="result-metadata info">
+    <tr class="expectation_message"><th>Test:</th><td><code>is expected to be running</code></td></tr>
+    <tr class="status status-passed"><th>Status:</th><td><div>Passed</div></td></tr>
+    
+    
+    <tr class="duration"><th>Duration:</th><td>0.0001083 seconds</td></tr>
+  </table>
+</div>
+
+  
+
+</div>
+
+    
+      
+
+
+<div class="control control-status-passed" id="control-virtualbox-3.0">
+
+  
+
+  <h3 class="control-title">Control <code>virtualbox-3.0</code></h3>
+  <table class="control-metadata info" id="control-metadata-virtualbox-3.0">
+    <tr class="status status-passed"><th>Status:</th><td><div>Passed</div></td></tr>
+    <tr class="title"><th>Title:</th><td>check if virtualbox is running</td></tr> 
+    <tr class="desc"><th>Description:</th><td>check virtualbox service</td></tr> 
+    <tr class="impact impact-high"><th>Impact:</th><td>1.0</td></tr> 
+    
+    
+    <tr class="code">
+      <th>Source Code:</th>
+      <td>
+        <input type="button" class="show-source-code" id="show-code-virtualbox-3.0" value="Show Source"/>
+        <input type="button" class="hide-source-code hidden" id="hide-code-virtualbox-3.0" value="Hide Source"/>
+        <pre class="source-code hidden" id="source-code-virtualbox-3.0">
+          <code>
+control "virtualbox-3.0" do                     # A unique ID for this control
+  impact 1.0                                    # The criticality, if this control fails.
+  title "check if virtualbox is running"        # A human-readable title
+  desc "check virtualbox service"
+  describe service('vboxweb-service') do
+    it { should be_installed }
+    it { should be_enabled }
+    it { should be_running }
+  end
+end
+
+          </code>
+        </pre>
+      </td>
+    </tr>
+  <!-- TODO waiver data -->
+
+  </table>
+
+  
+    
+<div class="result" id="result-Service_vboxweb_service">
+  <h4 class="resource-title">Resource <code>Service vboxweb-service</code></h4>
+  <table class="result-metadata info">
+    <tr class="expectation_message"><th>Test:</th><td><code>is expected to be installed</code></td></tr>
+    <tr class="status status-passed"><th>Status:</th><td><div>Passed</div></td></tr>
+    
+    
+    <tr class="duration"><th>Duration:</th><td>0.0872 seconds</td></tr>
+  </table>
+</div>
+
+  
+    
+<div class="result" id="result-Service_vboxweb_service">
+  <h4 class="resource-title">Resource <code>Service vboxweb-service</code></h4>
+  <table class="result-metadata info">
+    <tr class="expectation_message"><th>Test:</th><td><code>is expected to be enabled</code></td></tr>
+    <tr class="status status-passed"><th>Status:</th><td><div>Passed</div></td></tr>
+    
+    
+    <tr class="duration"><th>Duration:</th><td>0.0002242 seconds</td></tr>
+  </table>
+</div>
+
+  
+    
+<div class="result" id="result-Service_vboxweb_service">
+  <h4 class="resource-title">Resource <code>Service vboxweb-service</code></h4>
+  <table class="result-metadata info">
+    <tr class="expectation_message"><th>Test:</th><td><code>is expected to be running</code></td></tr>
+    <tr class="status status-passed"><th>Status:</th><td><div>Passed</div></td></tr>
+    
+    
+    <tr class="duration"><th>Duration:</th><td>8.32e-05 seconds</td></tr>
+  </table>
+</div>
+
+  
+
+</div>
+
+    
+      
+
+
+<div class="control control-status-passed" id="control-vmware_tools-1.0">
+
+  
+
+  <h3 class="control-title">Control <code>vmware_tools-1.0</code></h3>
+  <table class="control-metadata info" id="control-metadata-vmware_tools-1.0">
+    <tr class="status status-passed"><th>Status:</th><td><div>Passed</div></td></tr>
+    <tr class="title"><th>Title:</th><td>check if vmware tools command exists</td></tr> 
+    <tr class="desc"><th>Description:</th><td>check vmware tools command</td></tr> 
+    <tr class="impact impact-high"><th>Impact:</th><td>1.0</td></tr> 
+    
+    
+    <tr class="code">
+      <th>Source Code:</th>
+      <td>
+        <input type="button" class="show-source-code" id="show-code-vmware_tools-1.0" value="Show Source"/>
+        <input type="button" class="hide-source-code hidden" id="hide-code-vmware_tools-1.0" value="Hide Source"/>
+        <pre class="source-code hidden" id="source-code-vmware_tools-1.0">
+          <code>
+control "vmware_tools-1.0" do                           # A unique ID for this control
+  impact 1.0                                       # The criticality, if this control fails.
+  title "check if vmware tools command exists"          # A human-readable title
+  desc "check vmware tools command"
+  describe command('ovftool --version') do
+    its('exit_status') { should eq 0 }
+  end
+end
+
+          </code>
+        </pre>
+      </td>
+    </tr>
+  <!-- TODO waiver data -->
+
+  </table>
+
+  
+    
+<div class="result" id="result-Command___ovftool___version_">
+  <h4 class="resource-title">Resource <code>Command: `ovftool --version`</code></h4>
+  <table class="result-metadata info">
+    <tr class="expectation_message"><th>Test:</th><td><code>exit_status is expected to eq 0</code></td></tr>
+    <tr class="status status-passed"><th>Status:</th><td><div>Passed</div></td></tr>
+    
+    
+    <tr class="duration"><th>Duration:</th><td>0.4436528 seconds</td></tr>
   </table>
 </div>
 
@@ -354,15 +809,15 @@ end
         <tr><th colspan=2><h4 id="platform-label">Platform Information</h4></th></tr>
         <tr class= "name"><th>Name:</th><td>ubuntu</td></tr>
         <tr class= "release"><th>Release:</th><td>18.04</td></tr>
-        <tr class= "target"><th>Target:</th><td>ssh://ELEGOEV-20H2\cxtla@127.0.0.1:52324</td></tr>
+        <tr class= "target"><th>Target:</th><td>ssh://ELEGOEV-20H2\cxtla@127.0.0.1:50775</td></tr>
       </table>
       <table id="statistics" class="info">
         <tr><th colspan="2"><h4 id="statistics-label">Control Statistics</h4></th></tr>
-        <tr class= "passed"><th>Passed:</th><td>2</td></tr>
+        <tr class= "passed"><th>Passed:</th><td>9</td></tr>
         <tr class= "skipped"><th>Skipped:</th><td>0</td></tr>
         <tr class= "failed"><th>Failed:</th><td>0</td></tr>
-        <tr class= "duration"><th>Duration:</th><td>0.2020405 seconds</td></tr>
-        <tr class= "date"><th>Time Finished:</th><td>2021-02-26 17:07:13 +0100</td></tr>
+        <tr class= "duration"><th>Duration:</th><td>5.4299227 seconds</td></tr>
+        <tr class= "date"><th>Time Finished:</th><td>2021-02-27 15:02:04 +0100</td></tr>
       </table>
       <span id="inspec-version">Chef InSpec version 4.24.8</span>
     </div>
