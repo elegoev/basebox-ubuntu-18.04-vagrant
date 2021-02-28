@@ -14,13 +14,13 @@ Used base image [elegoev/ubuntu-18.04](https://app.vagrantup.com/elegoev/boxes/u
 | packer    | packer build, provisioner and post-processor scripts |
 | test      | test environment for provision & inspec development  |
 
-## Configuration
+## Vagrant 
 
 ### Vagrant Cloud
 
 - [elegoev/ubuntu-18.04-vagrant](https://app.vagrantup.com/elegoev/boxes/ubuntu-18.04-vagrant)
 
-### Useful Vagrant Plugins
+### Vagrant Plugins
 
 - [vagrant-disksize](https://github.com/sprotheroe/vagrant-disksize)
 - [vagrant-hosts](https://github.com/oscar-stack/vagrant-hosts)
@@ -29,9 +29,7 @@ Used base image [elegoev/ubuntu-18.04](https://app.vagrantup.com/elegoev/boxes/u
 - [vagrant-serverspec](https://github.com/vvchik/vagrant-serverspec)
 - [vagrant-vmware-esxi](https://github.com/josenk/vagrant-vmware-esxi)
 
-### Using vagrant
-
-#### Vagrantfile
+### Vagrantfile
 
     Vagrant.configure("2") do |config|
 
@@ -68,9 +66,7 @@ Used base image [elegoev/ubuntu-18.04](https://app.vagrantup.com/elegoev/boxes/u
 
     end
 
-### Using mate
-
-#### xRDP Issue
+### xRDP Issue
 
     xRDP is not working correctly, after 'vagrant up' try the following
 
