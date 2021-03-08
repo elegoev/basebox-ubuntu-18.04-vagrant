@@ -79,14 +79,14 @@ sudo ln -s /usr/share/zoneinfo/Europe/Zurich /etc/localtime
 timedatectl
 
 # set version
-VMWARE_TOOLS_VERSION=$(ovftool --version | awk  '{print $3}')
+OVF_TOOLS_VERSION=$(ovftool --version | awk  '{print $3}')
 VIRTUALBOX_VERSION=$(vboxmanage --version)
 JFROG_VERSION=$(jfrog --version | awk  '{print $3}')
 GIT_VERSION=$(git version | awk  '{print $3}')
 VAGRANT_VERSION=$(vagrant version | grep Installed | awk  '{print $3}')
 echo "# Installed application "  > $application_file_path
 echo "***                     " >> $application_file_path
-echo "> VmWare Tools: ${VMWARE_TOOLS_VERSION}" >> $application_file_path
+echo "> OVF Tools: ${OVF_TOOLS_VERSION}" >> $application_file_path
 echo "> Git: ${GIT_VERSION}" >> $application_file_path 
 echo "> JFrog: ${JFROG_VERSION}" >> $application_file_path 
 echo "> VirtualBox: $VIRTUALBOX_VERSION" >> $application_file_path
